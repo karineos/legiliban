@@ -15,6 +15,10 @@
                 <img src="images/logo.png" alt="Légi Liban logo" class="logo">
                 <span class="brand">LÉGI&nbsp;LIBAN</span>
             </div>
+            <nav class="main-nav">
+                <a href="#journal">Journal officiel</a>
+                <a href="#categories">Collections</a>
+            </nav>
         </div>
     </header>
 
@@ -29,75 +33,159 @@
             CONSTITUTION
         </div>
 
-        <!-- GAZETTE PINK CARD -->
-        <section class="gazette-section">
-            <div class="gazette-card rtl">
+        <!-- GAZETTE / JOURNAL OFFICIEL FEATURED CARD -->
+        <section id="journal" class="gazette-section reveal">
+            <a href="journal.html" class="gazette-card rtl">
                 <div class="gazette-header">
-                    <h2>الجريدة الرسمية</h2>
-                    <button class="more-btn">للمزيد</button>
+                    <div>
+                        <span class="gazette-eyebrow">الجريدة الرسمية اللبنانية</span>
+                        <h2>العدد رقم 32 – 2024</h2>
+                    </div>
+                    <span class="gazette-chip">إطّلع على العدد</span>
                 </div>
+
+                <div class="gazette-meta">
+                    <span>تاريخ النشر: 12 تموز 2024</span>
+                    <span>بيروت – المديرية العامة لرئاسة مجلس الوزراء</span>
+                </div>
+
                 <div class="gazette-lines">
-                    <div class="gazette-line"></div>
-                    <div class="gazette-line"></div>
-                    <div class="gazette-line"></div>
+                    <div class="gazette-line">
+                        <span class="gazette-line-title">قانون المالية العامة</span>
+                        <span class="gazette-line-tag">قانون</span>
+                    </div>
+                    <div class="gazette-line">
+                        <span class="gazette-line-title">مرسوم تعديل بعض أحكام قانون الإيجارات</span>
+                        <span class="gazette-line-tag">مرسوم</span>
+                    </div>
+                    <div class="gazette-line">
+                        <span class="gazette-line-title">مذكرة تنظيمية بشأن عمل الإدارات العامة</span>
+                        <span class="gazette-line-tag">مذكرة</span>
+                    </div>
                 </div>
-            </div>
+
+                <div class="gazette-footer-row">
+                    <span class="gazette-link">عرض تفاصيل العدد</span>
+                    <span class="gazette-arrow">↗</span>
+                </div>
+            </a>
         </section>
 
         <!-- CATEGORY CARDS -->
-        <section class="cards-section">
+        <section id="categories" class="cards-section">
 
-        <article class="category-card card-constitution">
-    <div class="card-overlay">
-        <div class="card-main">
-            <div class="card-text-left">
-                <p class="card-description">
-                    Présentation rapide / ملخص بسيط عن هذا القسم.
-                </p>
-            </div>
-
-            <div class="card-text-right">
-                <h3>CONSTITUTION</h3>
-                <p>الدستور</p>
-            </div>
-        </div>
-    </div>
-</article>
-
-
-            <article class="category-card card-preamble">
-                <div class="card-overlay">
-                    <h3>Preambule de la constitution</h3>
-                    <p>مقدمة الدستور</p>
-                </div>
+            <article class="category-card card-constitution reveal" data-direction="right">
+                <a href="#" class="card-link">
+                    <div class="card-overlay">
+                        <div class="card-main">
+                            <div class="card-text-left">
+                                <p class="card-description">
+                                    Texte intégral de la Constitution libanaise et ses mises à jour.  
+                                    نص الدستور اللبناني كاملاً مع جميع التعديلات الدستورية.
+                                </p>
+                            </div>
+                            <div class="card-text-right">
+                                <h3>CONSTITUTION</h3>
+                                <p>الدستور</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </article>
 
-            <article class="category-card card-codes">
-                <div class="card-overlay">
-                    <h3>Les codes</h3>
-                    <p>القوانين</p>
-                </div>
+            <article class="category-card card-preamble reveal" data-direction="left">
+                <a href="#" class="card-link">
+                    <div class="card-overlay">
+                        <div class="card-main">
+                            <div class="card-text-left">
+                                <p class="card-description">
+                                    Analyse structurée du Préambule et de ses principes fondamentaux.  
+                                    تحليل منظم لمقدمة الدستور ومبادئها الأساسية.
+                                </p>
+                            </div>
+                            <div class="card-text-right">
+                                <h3>Preambule de la constitution</h3>
+                                <p>مقدمة الدستور</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </article>
 
-            <article class="category-card card-doctrine">
-                <div class="card-overlay">
-                    <h3>Doctrine</h3>
-                    <p>الفقه القانوني</p>
-                </div>
+            <article class="category-card card-codes reveal" data-direction="right">
+                <a href="#" class="card-link">
+                    <div class="card-overlay">
+                        <div class="card-main">
+                            <div class="card-text-left">
+                                <p class="card-description">
+                                    Codes civil, pénal, commercial, du travail et textes spécialisés.  
+                                    قوانين مدنية، جزائية، تجارية، عمل ونصوص متخصصة أخرى.
+                                </p>
+                            </div>
+                            <div class="card-text-right">
+                                <h3>Les codes</h3>
+                                <p>القوانين</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </article>
 
-            <article class="category-card card-jurisprudence">
-                <div class="card-overlay">
-                    <h3>Jurisprudence</h3>
-                    <p>الاجتهاد القضائي</p>
-                </div>
+            <article class="category-card card-doctrine reveal" data-direction="left">
+                <a href="#" class="card-link">
+                    <div class="card-overlay">
+                        <div class="card-main">
+                            <div class="card-text-left">
+                                <p class="card-description">
+                                    Doctrine et commentaires des auteurs et professeurs de droit.  
+                                    الفقه القانوني وآراء الفقهاء والأساتذة وشروحاتهم.
+                                </p>
+                            </div>
+                            <div class="card-text-right">
+                                <h3>Doctrine</h3>
+                                <p>الفقه القانوني</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </article>
 
-            <article class="category-card card-parlement">
-                <div class="card-overlay">
-                    <h3>Procès-verbaux du Parlement</h3>
-                    <p>محاضر مجلس النواب</p>
-                </div>
+            <article class="category-card card-jurisprudence reveal" data-direction="right">
+                <a href="#" class="card-link">
+                    <div class="card-overlay">
+                        <div class="card-main">
+                            <div class="card-text-left">
+                                <p class="card-description">
+                                    Jurisprudence des hautes juridictions et décisions essentielles.  
+                                    اجتهادات محكمة التمييز، مجلس شورى الدولة، وسائر المحاكم العليا.
+                                </p>
+                            </div>
+                            <div class="card-text-right">
+                                <h3>Jurisprudence</h3>
+                                <p>الاجتهاد القضائي</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="category-card card-parlement reveal" data-direction="left">
+                <a href="#" class="card-link">
+                    <div class="card-overlay">
+                        <div class="card-main">
+                            <div class="card-text-left">
+                                <p class="card-description">
+                                    Procès-verbaux des séances parlementaires et suivi des débats.  
+                                    محاضر جلسات مجلس النواب وتتبع مسار المناقشات والتصويت.
+                                </p>
+                            </div>
+                            <div class="card-text-right">
+                                <h3>Procès-verbaux du Parlement</h3>
+                                <p>محاضر مجلس النواب</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </article>
 
         </section>
@@ -112,5 +200,22 @@
         </div>
     </footer>
 
+    <!-- SMALL SCRIPT FOR SCROLL REVEAL -->
+    <script>
+        // Scroll reveal for elements with .reveal
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Once revealed, stop observing for performance
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        reveals.forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
