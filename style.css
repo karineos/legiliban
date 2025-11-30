@@ -1,0 +1,329 @@
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #ffffff;
+    color: #111;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+/* HEADER */
+.site-header {
+    background-color: #3D0E17; /* burgundy */
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-inner {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+/* GREY STRIP */
+.sub-header {
+    background-color: #d4d4d4;
+    height: 48px;
+    width: 100%;
+}
+
+/* MAIN PAGE WRAPPER */
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+/* GAZETTE BOX */
+.gazette-section {
+    margin-bottom: 32px;
+}
+
+.gazette-card {
+    background-color: #e9a9bb; /* pink */
+    border-radius: 20px;
+    padding: 20px 24px;
+}
+
+.gazette-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.gazette-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3D0E17;
+}
+
+.more-btn {
+    border: none;
+    background-color: #c48ea1;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.more-btn:hover {
+    opacity: 0.9;
+}
+
+.gazette-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gazette-line {
+    background-color: #f1c1d0;
+    border-radius: 999px;
+    height: 36px;
+}
+
+/* CARDS */
+.cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Base card style */
+.category-card {
+    position: relative;
+    border-radius: 26px;
+    overflow: hidden;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Dark gradient overlay for readability */
+.category-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.55)
+    );
+}
+
+.card-overlay {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 24px;
+}
+
+.card-overlay h3 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-overlay p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* BACKGROUND IMAGES (change paths if you use other names) */
+.card-constitution {
+    background-image: url("images/c1.jpg");
+}
+
+.card-preamble {
+    background-image: url("images/c2.webp");
+}
+
+.card-codes {
+    background-image: url("images/c3.webp");
+}
+
+.card-doctrine {
+    background-image: url("images/c4.webp");
+}
+
+.card-jurisprudence {
+    background-image: url("images/c1.jpg");
+}
+
+.card-parlement {
+    background-image: url("images/c2.webp");
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: #3D0E17;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 16px;
+    gap: 8px;
+}
+
+.flag {
+    width: 28px;
+    border-radius: 4px;
+}
+
+.footer-text {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (min-width: 768px) {
+    .page {
+        padding: 32px 24px 80px;
+    }
+
+    .gazette-card {
+        padding: 24px 32px;
+    }
+
+    .category-card {
+        height: 260px;
+    }
+
+    .card-overlay h3 {
+        font-size: 22px;
+    }
+}
+.category-card {
+    position: relative;
+    border-radius: 26px;
+    overflow: hidden;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* gradient overlay stays the same */
+.category-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.55)
+    );
+}
+
+/* container for content */
+.card-overlay {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    height: 100%;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+}
+
+/* main wrapper that will switch from column to row */
+.card-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;      /* default: stacked / centered */
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+/* right part: title + arabic subtitle */
+.card-text-right h3 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-text-right p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* left description: hidden by default */
+.card-text-left {
+    flex: 1;
+}
+
+.card-description {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
+}
+@media (max-width: 767px) {
+    .card-main {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .card-text-right {
+        text-align: center !important;
+    }
+
+    /* optionally always show the description on mobile */
+    .card-description {
+        opacity: 1;
+        max-height: 200px;
+        transform: translateX(0);
+    }
+}
