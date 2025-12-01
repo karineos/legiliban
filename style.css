@@ -553,12 +553,21 @@ a {
     align-items: center;
     gap: 8px;
 }
+.footer-brand img {
+    width: 32px !important;
+    height: 20px !important;
+    object-fit: contain;
+}
 
 .footer-flag {
-    width: 32px;
-    height: auto;
-    border-radius: 5px;
+    width: 32px !important;
+    height: auto !important;
+    max-width: 32px !important;
+    max-height: 20px !important;
+    object-fit: contain;
+    display: inline-block;
 }
+
 
 .footer-title {
     font-size: 16px;
