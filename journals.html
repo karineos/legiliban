@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8" />
+    <title>أعداد الجريدة الرسمية – لِجي ليبان</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="journal-list-body">
+
+    <!-- Reuse same sticky header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-row">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Légi Liban logo" class="logo">
+                    <span class="brand">LÉGI&nbsp;LIBAN</span>
+                </div>
+                <button class="nav-toggle" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html#journal">Journal officiel</a>
+                <a href="index.html#categories">Collections</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="sub-header"></div>
+
+    <main class="page journal-list-page rtl">
+
+        <div class="journal-breadcrumb">
+            الجريدة الرسمية &nbsp;/&nbsp; جميع الأعداد
+        </div>
+
+        <header class="journal-list-page-header">
+            <h1>أعداد الجريدة الرسمية للجمهورية اللبنانية</h1>
+            <p>ابحث بحسب رقم العدد، السنة أو تاريخ النشر.</p>
+        </header>
+
+        <!-- SEARCH + FILTERS -->
+        <section class="journal-search-section">
+            <div class="journal-search-bar">
+                <label>
+                    بحث نصّي
+                    <input type="text" id="searchText" placeholder="رقم العدد، عنوان القانون، نوع النص..." />
+                </label>
+
+                <label>
+                    السنة
+                    <select id="filterYear">
+                        <option value="">جميع السنوات</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </label>
+
+                <label>
+                    تاريخ النشر
+                    <input type="date" id="filterDate" />
+                </label>
+
+                <label>
+                    نوع النص الغالب
+                    <select id="filterType">
+                        <option value="">جميع الأنواع</option>
+                        <option value="laws">قوانين</option>
+                        <option value="decrees">مراسيم</option>
+                        <option value="memos">مذكرات/قرارات</option>
+                    </select>
+                </label>
+            </div>
+        </section>
+
+        <!-- JOURNAL LIST -->
+        <section class="journal-catalog" id="journalCatalog">
+
+            <!-- 2024 – Issue 32 -->
+            <article class="journal-item" id="issue-32-2024"
+                     data-number="32" data-year="2024"
+                     data-date="2024-07-12" data-type="laws">
+                <a href="journal.html" class="journal-item-inner">
+                    <div class="journal-item-main">
+                        <h2>العدد رقم 32 / 2024</h2>
+                        <p class="journal-item-date">تاريخ النشر: 12 تموز 2024 – بيروت</p>
+                        <p class="journal-item-summary">
+                            قانون المالية العامة لسنة 2024، مراسيم تنفيذية، ومذكرات تنظيمية للإدارات العامة.
+                        </p>
+                    </div>
+                    <div class="journal-item-meta">
+                        <span>قوانين · مراسيم · مذكرات</span>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 2024 – Issue 31 -->
+            <article class="journal-item" id="issue-31-2024"
+                     data-number="31" data-year="2024"
+                     data-date="2024-07-05" data-type="laws">
+                <div class="journal-item-inner">
+                    <div class="journal-item-main">
+                        <h2>العدد رقم 31 / 2024</h2>
+                        <p class="journal-item-date">تاريخ النشر: 5 تموز 2024 – بيروت</p>
+                        <p class="journal-item-summary">
+                            تعديلات على قانون الضريبة على القيمة المضافة وبعض الرسوم المرتبطة بالقطاع العقاري.
+                        </p>
+                    </div>
+                    <div class="journal-item-meta">
+                        <span>قوانين · قرارات</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2024 – Issue 30 -->
+            <article class="journal-item" id="issue-30-2024"
+                     data-number="30" data-year="2024"
+                     data-date="2024-06-28" data-type="decrees">
+                <div class="journal-item-inner">
+                    <div class="journal-item-main">
+                        <h2>العدد رقم 30 / 2024</h2>
+                        <p class="journal-item-date">تاريخ النشر: 28 حزيران 2024 – بيروت</p>
+                        <p class="journal-item-summary">
+                            مرسوم بإعادة تنظيم بعض الوزارات والإدارات العامة، ومذكرات تطبيقية مرافقة.
+                        </p>
+                    </div>
+                    <div class="journal-item-meta">
+                        <span>مراسيم · مذكرات</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Example 2023 issues -->
+            <article class="journal-item"
+                     data-number="12" data-year="2023"
+                     data-date="2023-03-10" data-type="laws">
+                <div class="journal-item-inner">
+                    <div class="journal-item-main">
+                        <h2>العدد رقم 12 / 2023</h2>
+                        <p class="journal-item-date">تاريخ النشر: 10 آذار 2023 – بيروت</p>
+                        <p class="journal-item-summary">
+                            قوانين متعلقة بتنظيم المهن الحرة وتعديل بعض الرسوم القضائية.
+                        </p>
+                    </div>
+                    <div class="journal-item-meta">
+                        <span>قوانين</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="journal-item"
+                     data-number="11" data-year="2023"
+                     data-date="2023-02-28" data-type="decrees">
+                <div class="journal-item-inner">
+                    <div class="journal-item-main">
+                        <h2>العدد رقم 11 / 2023</h2>
+                        <p class="journal-item-date">تاريخ النشر: 28 شباط 2023 – بيروت</p>
+                        <p class="journal-item-summary">
+                            مراسيم تنظيمية تتعلق بالبلديات والاتحادات البلدية.
+                        </p>
+                    </div>
+                    <div class="journal-item-meta">
+                        <span>مراسيم</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <p class="journal-catalog-note">
+            هذه البيانات تجريبية وتستخدم فقط لغرض العرض والتصميم على موقع لِجي ليبان.
+        </p>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <img src="images/lebanon.svg" alt="Lebanon flag" class="flag">
+            <span class="footer-text">الجمهورية اللبنانية</span>
+        </div>
+    </footer>
+
+    <script>
+        // mobile nav toggle
+        const mainNav = document.querySelector('.main-nav');
+        const navToggle = document.querySelector('.nav-toggle');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('open');
+            });
+        }
+
+        // simple filters for journal items
+        const searchInput = document.getElementById('searchText');
+        const yearSelect = document.getElementById('filterYear');
+        const dateInput = document.getElementById('filterDate');
+        const typeSelect = document.getElementById('filterType');
+        const items = document.querySelectorAll('.journal-item');
+
+        function normalize(str) {
+            return (str || "").toString().toLowerCase();
+        }
+
+        function applyFilters() {
+            const q = normalize(searchInput.value);
+            const year = yearSelect.value;
+            const date = dateInput.value;
+            const type = typeSelect.value;
+
+            items.forEach(item => {
+                const number = item.dataset.number;
+                const itemYear = item.dataset.year;
+                const itemDate = item.dataset.date;
+                const itemType = item.dataset.type;
+                const text = normalize(item.innerText);
+
+                let visible = true;
+
+                if (q && !text.includes(q) && number !== q) visible = false;
+                if (year && itemYear !== year) visible = false;
+                if (date && itemDate !== date) visible = false;
+                if (type && itemType !== type) visible = false;
+
+                item.style.display = visible ? 'block' : 'none';
+            });
+        }
+
+        searchInput.addEventListener('input', applyFilters);
+        yearSelect.addEventListener('change', applyFilters);
+        dateInput.addEventListener('change', applyFilters);
+        typeSelect.addEventListener('change', applyFilters);
+    </script>
+</body>
+</html>
