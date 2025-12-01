@@ -5,39 +5,13 @@
     <title>الدستور اللبناني – لِجي ليبان</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+        <script src="main.js" defer></script>
+
 </head>
 <body class="constitution-body">
 
     <!-- Sticky header reused -->
-<header class="site-header">
-    <div class="header-inner">
-        <div class="logo-row">
-            <div class="logo-container">
-                <img src="images/logo.png" alt="Légi Liban logo" class="logo">
-                <span class="brand"></span>
-            </div>
-
-            <!-- mobile hamburger -->
-            <button class="nav-toggle" aria-label="Ouvrir le menu">
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-
-        <!-- nav under the logo -->
-        <nav class="main-nav">
-            <a href="journals.html">Journal officiel</a>
-            <a href="index.html">Collections</a>
-            <a href="constitution.html">Constitution</a>
-            <a href="preambule.html">Preambule</a>
-            <a href="#categories">Codes</a>
-            <a href="#categories">Doctrine</a>
-            <a href="#categories">Jurisprudence</a>
-            <a href="#categories">rocès-verbaux</a>
-
-        </nav>
-    </div>
-</header>
+    <div id="site-header"></div>
 
     <div class="sub-header"></div>
 
@@ -185,25 +159,8 @@
         </section>
 
     </main>
-<footer class="site-footer">
-    <div class="footer-inner">
+    <div id="site-footer"></div>
 
-        <div class="footer-brand">
-            <img src="images/lebanon.svg" class="footer-flag" alt="">
-            <span class="footer-title">الجمهورية اللبنانية — LÉGI LIBAN</span>
-        </div>
-
-        <div class="footer-info">
-            <p><strong>Visitors:</strong> <span id="viewCount">0</span></p>
-            <p><strong>Email:</strong> <a href="mailto:info@legiliban.com">info@legiliban.com</a></p>
-        </div>
-
-        <div class="footer-copy">
-            © <span id="year"></span> Légi Liban — Developed by <strong>Kai Studio</strong>
-        </div>
-
-    </div>
-</footer>
 <script>
 // YEAR AUTO-UPDATE
 document.getElementById("year").textContent = new Date().getFullYear();
