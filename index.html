@@ -8,19 +8,29 @@
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="header-inner">
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo-row">
             <div class="logo-container">
                 <img src="images/logo.png" alt="Légi Liban logo" class="logo">
                 <span class="brand">LÉGI&nbsp;LIBAN</span>
             </div>
-            <nav class="main-nav">
-                <a href="#journal">Journal officiel</a>
-                <a href="#categories">Collections</a>
-            </nav>
+
+            <!-- mobile hamburger -->
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>
+
+        <!-- nav under the logo -->
+        <nav class="main-nav">
+            <a href="#journal">Journal officiel</a>
+            <a href="#categories">Collections</a>
+        </nav>
+    </div>
+</header>
+
 
     <!-- SMALL GREY BAR -->
     <div class="sub-header"></div>
@@ -197,22 +207,51 @@
         </div>
     </footer>
 
-    <!-- SMALL SCRIPT FOR SCROLL REVEAL -->
     <script>
-        // Scroll reveal for elements with .reveal
-        const reveals = document.querySelectorAll('.reveal');
+    // Scroll reveal for elements with .reveal
+    const reveals = document.querySelectorAll('.reveal');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    // Once revealed, stop observing for performance
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
 
-        reveals.forEach(el => observer.observe(el));
-    </script>
+    reveals.forEach(el => observer.observe(el));
+
+    // Sticky header behaviour: hide nav when scrolling down, show when scrolling up
+    const mainNav = document.querySelector('.main-nav');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const currentY = window.scrollY;
+
+        // desktop only
+        if (window.innerWidth > 768) {
+            if (currentY > lastScrollY && currentY > 80) {
+                // scrolling down
+                mainNav.classList.add('nav-hidden');
+            } else if (currentY < lastScrollY - 10) {
+                // scrolling up
+                mainNav.classList.remove('nav-hidden');
+            }
+        }
+
+        lastScrollY = currentY;
+    });
+
+    // Mobile hamburger toggle
+    const navToggle = document.querySelector('.nav-toggle');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('open');
+        });
+    }
+</script>
+
 </body>
 </html>
