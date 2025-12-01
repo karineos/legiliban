@@ -1165,3 +1165,72 @@ a {
     }
 }
 
+
+
+/* RIGHT SIDE INDEX (BOOK-STYLE NAVIGATION) */
+
+.constitution-page {
+    position: relative;
+}
+
+/* the fixed sidebar */
+.constitution-index {
+    position: fixed;
+    top: 140px;
+    right: 30px;
+    width: 180px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 14px 16px;
+    border: 1px solid rgba(61, 14, 23, 0.12);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    z-index: 20;
+}
+
+.constitution-index h3 {
+    margin: 0 0 10px;
+    font-size: 15px;
+    color: var(--brand);
+    text-align: right;
+}
+
+.constitution-index ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.constitution-index li {
+    margin-bottom: 8px;
+}
+
+.constitution-index a {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: var(--brand);
+    background: #f7f0f2;
+    transition: all 0.2s ease;
+    text-align: right;
+}
+
+.constitution-index a:hover {
+    background: var(--brand);
+    color: #fff;
+}
+
+/* ACTIVE highlighted tab */
+.constitution-index a.active {
+    background: var(--brand);
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Responsive: hide sidebar and replace with top dropdown */
+@media (max-width: 900px) {
+    .constitution-index {
+        display: none;
+    }
+}
+

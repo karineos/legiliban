@@ -36,6 +36,16 @@
         <div class="constitution-breadcrumb">
             الدستور اللبناني &nbsp;/&nbsp; عرض عام
         </div>
+        <!-- RIGHT SIDE SECTION INDEX -->
+        <aside class="constitution-index">
+            <h3>الفهرس</h3>
+            <ul>
+                <li><a href="#preamble" data-target="preamble">مقدمة الدستور</a></li>
+                <li><a href="#part1" data-target="part1">الأحكام العامة</a></li>
+                <li><a href="#rights" data-target="rights">الحقوق والحريات</a></li>
+                <li><a href="#institutions" data-target="institutions">السلطات والمؤسسات</a></li>
+            </ul>
+        </aside>
 
         <!-- HERO SECTION -->
         <section class="constitution-hero reveal">
@@ -195,6 +205,53 @@
         }, { threshold: 0.2 });
 
         reveals.forEach(el => observer.observe(el));
+
+// --- RIGHT SIDE INDEX ACTIVE HIGHLIGHT ---
+const sectionIds = ["preamble", "part1", "rights", "institutions"];
+const navLinks = document.querySelectorAll(".constitution-index a");
+
+function activateNav(id) {
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.dataset.target === id) {
+            link.classList.add("active");
+        }
+    });
+}
+
+const observer2 = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                activateNav(entry.target.id);
+            }
+        });
+    },
+    { threshold: 0.35 }
+);
+
+// observe sections
+sectionIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer2.observe(el);
+});
+
+// smooth scroll for index clicks
+navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = document.getElementById(link.dataset.target);
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    });
+});
+
+
+
+
+
+
     </script>
 </body>
 </html>
