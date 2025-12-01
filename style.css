@@ -106,27 +106,47 @@ a {
 }
 
 /* hamburger (mobile only) */
+/* hamburger (mobile only) */
 .nav-toggle {
     display: none;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 32px;
-    height: 28px;
+    width: 34px;
+    height: 30px;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    background: transparent;
-    padding: 0 6px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(0, 0, 0, 0.18);
+    padding: 0;
     cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .nav-toggle span {
     display: block;
+    width: 15px;
     height: 2px;
-    background: #ffffff;
-    margin: 6px 0;
     border-radius: 999px;
+    background: #ffffff;
+}
+
+/* small detail: middle bar shorter for a more designed look */
+.nav-toggle span:nth-child(2) {
+    width: 11px;
+}
+
+/* hover/active feel */
+.nav-toggle:hover {
+    transform: translateY(-50%) scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+    border-color: rgba(255, 255, 255, 0.9);
 }
 
 /* MOBILE HEADER */
@@ -140,9 +160,7 @@ a {
     }
 
     .nav-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: flex;   /* 🔹 show only on mobile */
     }
 
     /* mobile nav = dropdown */
@@ -619,9 +637,17 @@ a {
         align-items: flex-start;
     }
 
-    .card-text-right {
+   .card-text-right {
+        order: 1;
         flex: unset;
         text-align: left;
+        width: 100%;
+    }
+
+    .card-text-left {
+        order: 2;
+        width: 100%;
+        margin-top: 4px;
     }
 
     .card-description {
