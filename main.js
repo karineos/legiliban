@@ -1,4 +1,5 @@
 // --------- FOOTER: YEAR + VISITOR COUNTER ---------
+// --------- FOOTER: YEAR + PAGE VIEW COUNTER (increments on every refresh) ---------
 function initVisitorCounter() {
   const yearEl = document.getElementById("year");
   if (yearEl) {
@@ -9,19 +10,20 @@ function initVisitorCounter() {
   if (!viewEl) return;
 
   const VIEWS_KEY = "legiliban_totalViews";
-  const VISITED_KEY = "legiliban_hasVisitedThisSession";
 
+  // get current count, default 0
   let views = parseInt(localStorage.getItem(VIEWS_KEY) || "0", 10);
 
-  // only count ONCE per browser session
-  if (!sessionStorage.getItem(VISITED_KEY)) {
+  // ALWAYS increment on page load
     views++;
-    localStorage.setItem(VIEWS_KEY, String(views));
-    sessionStorage.setItem(VISITED_KEY, "1");
-  }
 
+  // save new total
+  localStorage.setItem(VIEWS_KEY, String(views));
+
+  // display it
   viewEl.textContent = views;
 }
+
 
 async function loadPartial(id, file) {
   const container = document.getElementById(id);

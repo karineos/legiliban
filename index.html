@@ -234,17 +234,7 @@
     <!-- FOOTER -->
     <div id="site-footer"></div>
 
-<script>
-// YEAR AUTO-UPDATE
-document.getElementById("year").textContent = new Date().getFullYear();
 
-// LOCAL VIEW COUNTER (fake global counter simulation)
-let views = localStorage.getItem("legilibanViews");
-if (!views) views = 0;
-views++;
-localStorage.setItem("legilibanViews", views);
-document.getElementById("viewCount").textContent = views;
-</script>
 
 
     <script>
